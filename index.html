@@ -1,0 +1,625 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Riya RCM and General Store | Jahanpur, Jokihat</title>
+  <meta name="description" content="Welcome to Riya RCM and General Store in Jahanpur, Jokihat, Araria, Bihar. Contact us for your daily shopping needs.">
+
+  <style>
+    :root {
+      --green: #126b45;
+      --dark: #103b2d;
+      --gold: #ffc857;
+      --light: #f5f8f3;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: #26352e;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .topbar {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 9px 12px;
+      font-size: 13px;
+    }
+
+    header {
+      background: white;
+      padding: 15px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      box-shadow: 0 3px 15px #0000000c;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 52px;
+      height: 52px;
+      background: var(--green);
+      color: white;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .brand h2 {
+      color: var(--dark);
+      font-size: 19px;
+      line-height: 1.3;
+    }
+
+    .brand p {
+      color: #6d7c72;
+      font-size: 12px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #26352e;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--green);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 9px;
+      font-weight: bold;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: white;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #26352e;
+    }
+
+    .hero {
+      padding: 85px 7%;
+      background:
+        radial-gradient(circle at 85% 20%, #b6dfb7 0, transparent 30%),
+        linear-gradient(120deg, #e6f4e7, #f9f8ec);
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--green);
+      background: #d9eedc;
+      padding: 7px 13px;
+      border-radius: 25px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.12;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--green);
+    }
+
+    .hero p {
+      color: #58685e;
+      font-size: 17px;
+      max-width: 540px;
+      margin-bottom: 25px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-art {
+      background: white;
+      border-radius: 28px;
+      padding: 35px 20px;
+      text-align: center;
+      box-shadow: 0 15px 45px #164c3217;
+      border: 1px solid #e5eee3;
+    }
+
+    .hero-art .big-icon {
+      font-size: 100px;
+      margin-bottom: 15px;
+    }
+
+    .hero-art h3 {
+      color: var(--dark);
+      font-size: 24px;
+    }
+
+    .hero-art p {
+      margin: 8px auto 0;
+      font-size: 14px;
+    }
+
+    section {
+      padding: 65px 7%;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+      font-size: 32px;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .section-heading p {
+      color: #69786d;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .category {
+      background: white;
+      padding: 28px 15px;
+      text-align: center;
+      border-radius: 16px;
+      border: 1px solid #e7eee5;
+      transition: 0.2s;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px #0000000b;
+    }
+
+    .category .icon {
+      font-size: 43px;
+      margin-bottom: 12px;
+    }
+
+    .category h3 {
+      color: var(--dark);
+      font-size: 17px;
+    }
+
+    .category p {
+      font-size: 13px;
+      color: #718076;
+      margin-top: 6px;
+    }
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .about-card {
+      background: #e8f4e8;
+      padding: 35px;
+      border-radius: 22px;
+    }
+
+    .about-card .store-icon {
+      font-size: 85px;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .about h2 {
+      color: var(--dark);
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      color: #5c6d61;
+      margin-bottom: 14px;
+    }
+
+    .owner {
+      background: var(--dark);
+      color: white;
+      padding: 22px;
+      border-radius: 14px;
+      margin-top: 22px;
+    }
+
+    .owner p {
+      color: #e1eee4;
+      margin: 3px 0;
+    }
+
+    .contact {
+      background: #eef5ec;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-card .icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .contact-card h3 {
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      color: #66766b;
+    }
+
+    .contact-card a {
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    .contact-action {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    footer {
+      background: #0c2d22;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: #d1dfd5;
+      margin-top: 6px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25d366;
+      color: white;
+      padding: 13px 18px;
+      border-radius: 40px;
+      font-weight: bold;
+      box-shadow: 0 5px 20px #00000025;
+      z-index: 10;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 55px 6%;
+      }
+
+      .hero-art {
+        max-width: 450px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .categories {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 48px 6%;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .brand h2 {
+        font-size: 16px;
+      }
+
+      .logo {
+        width: 44px;
+        height: 44px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    📍 Jahanpur, Jokihat, Araria, Bihar
+  </div>
+
+  <header>
+    <a href="#home" class="brand">
+      <div class="logo">R</div>
+      <div>
+        <h2>Riya RCM & General Store</h2>
+        <p>Your neighbourhood general store</p>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Categories</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <span class="eyebrow">WELCOME TO RIYA RCM</span>
+        <h1>Your Everyday Needs, <span>All in One Place!</span></h1>
+        <p>
+          Welcome to Riya RCM and General Store. Your local shop
+          in Jahanpur, Jokihat, for everyday shopping and household
+          essentials.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-green"
+             href="https://wa.me/919004630327"
+             target="_blank" rel="noopener">
+            💬 Contact on WhatsApp
+          </a>
+
+          <a class="btn btn-gold" href="#products">
+            Explore Categories →
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="big-icon">🛍️</div>
+        <h3>Riya RCM & General Store</h3>
+        <p>Your local shopping destination in Jahanpur.</p>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="section-heading">
+        <h2>Our Product Categories</h2>
+        <p>Everyday essentials for you and your family.</p>
+      </div>
+
+      <div class="categories">
+        <div class="category">
+          <div class="icon">🌾</div>
+          <h3>Groceries</h3>
+          <p>Daily food and kitchen essentials</p>
+        </div>
+
+        <div class="category">
+          <div class="icon">🧴</div>
+          <h3>Personal Care</h3>
+          <p>Everyday personal care products</p>
+        </div>
+
+        <div class="category">
+          <div class="icon">🧹</div>
+          <h3>Home Essentials</h3>
+          <p>Household cleaning and utility items</p>
+        </div>
+
+        <div class="category">
+          <div class="icon">🛒</div>
+          <h3>Daily Needs</h3>
+          <p>Convenient everyday shopping</p>
+        </div>
+      </div>
+
+      <p style="text-align:center; margin-top:20px; color:#69786d; font-size:13px;">
+        These are example categories. Actual products and availability
+        should be confirmed with the store.
+      </p>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="store-icon">🏪</div>
+          <h3 style="text-align:center;color:#103b2d;">
+            Your Local General Store
+          </h3>
+          <p style="text-align:center;margin-top:8px;">
+            Serving the Jahanpur community
+          </p>
+        </div>
+
+        <div>
+          <h2>About Our Store</h2>
+          <p>
+            Riya RCM and General Store is a neighbourhood general
+            store located in Jahanpur, Jokihat, Araria, Bihar.
+          </p>
+          <p>
+            We aim to make everyday shopping convenient by bringing
+            general merchandise and daily-use essentials together
+            in one place.
+          </p>
+
+          <div class="owner">
+            <p>Store Owner</p>
+            <h3>Ravindra Kumar Jha</h3>
+            <p>📍 In front of High School, Jahanpur</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section-heading">
+        <h2>Get in Touch</h2>
+        <p>Have a question? Contact our store directly.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="icon">📞</div>
+          <h3>Call Us</h3>
+          <p>Speak with the store</p>
+          <p style="margin-top:10px;">
+            <a href="tel:+919004630327">9004630327</a>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon">💬</div>
+          <h3>WhatsApp</h3>
+          <p>Send us a message</p>
+          <p style="margin-top:10px;">
+            <a href="https://wa.me/919004630327"
+               target="_blank" rel="noopener">
+              Chat on WhatsApp
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon">📍</div>
+          <h3>Visit Our Store</h3>
+          <p>In front of High School, Jahanpur</p>
+          <p>Jokihat, Araria, Bihar, India</p>
+          <p style="margin-top:10px;">
+            <a href="https://www.google.com/maps/search/?api=1&query=Jahanpur+High+School+Jokihat+Araria+Bihar"
+               target="_blank" rel="noopener">
+              Find on Google Maps
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-action">
+        <a class="btn btn-green"
+           href="mailto:parikshit.bhardwajjc@gmail.com">
+          ✉️ Email Us
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h3>Riya RCM & General Store</h3>
+    <p>Owned by Ravindra Kumar Jha</p>
+    <p>Jahanpur, Jokihat, Araria, Bihar, India</p>
+    <p>Phone: 9004630327</p>
+    <p style="margin-top:18px;">
+      © <span id="year"></span> Riya RCM and General Store.
+      All rights reserved.
+    </p>
+  </footer>
+
+  <a class="whatsapp-float"
+     href="https://wa.me/919004630327"
+     target="_blank" rel="noopener"
+     aria-label="Chat with us on WhatsApp">
+    💬 WhatsApp
+  </a>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
